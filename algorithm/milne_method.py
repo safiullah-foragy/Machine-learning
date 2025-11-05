@@ -1,10 +1,8 @@
 import matplotlib.pyplot as plt
 
-# Function dy/dx
 def f(x, y):
-    return x + y  # Example: dy/dx = x + y
+    return x + y
 
-# Milne's Predictor-Corrector Method
 def milne_method(x_values, y_values, h, x_to_find):
     predicted_points = []
     corrected_points = []

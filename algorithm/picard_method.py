@@ -1,11 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Function dy/dx
 def f(x, y):
-    return x + y   # Example: dy/dx = x + y
+    return x + y
 
-# Picard's Iteration Method
 def picard_method(x0, y0, x_end, n_iter=4, steps=100):
     h = (x_end - x0) / steps
     x_points = np.linspace(x0, x_end, steps + 1)
@@ -20,7 +18,7 @@ def picard_method(x0, y0, x_end, n_iter=4, steps=100):
         for i in range(1, len(x_points)):
             xi_1 = x_points[i-1]
             yi_1 = y_points[i-1]
-            y_new[i] = yi_1 + h * f(xi_1, yi_1)  # Euler step approximation
+            y_new[i] = yi_1 + h * f(xi_1, yi_1)
         y_points = y_new.copy()
         approximations.append(y_points)
         print(f"Iteration {k+1}: y({x_end}) ≈ {y_points[-1]:.6f}")

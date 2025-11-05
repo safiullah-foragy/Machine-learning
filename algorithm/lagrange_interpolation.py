@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 
-# Lagrange interpolation function
 def lagrange_interpolation(x_values, y_values, x):
     n = len(x_values)
     result = 0.0

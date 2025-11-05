@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Gradient Descent Function for Linear Regression
 def gradient_descent(x, y, m=0, b=0, learning_rate=0.01, epochs=10000):
     n = len(y)
     for _ in range(epochs):

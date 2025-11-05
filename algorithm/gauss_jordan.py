@@ -1,12 +1,11 @@
 import matplotlib.pyplot as plt
 
-# Augmented matrix [A|b]
 arr = [
     [2, 1, -1, 8],
     [-3, -1, 2, -11],
     [-2, 1, 2, -3]
 ]
-N = 3  # number of unknowns
+N = 3
 
 def gauss_jordan(arr, N):
     solutions_steps = []

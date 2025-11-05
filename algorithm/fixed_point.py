@@ -1,14 +1,13 @@
 import math
 import matplotlib.pyplot as plt
 
-# Corrected function
 def g(x):
     return (x**3 + 1) / 4
 
 def fixed_point(x0, tol, n):
     print("Iteration\t x")
     i = 1
-    x_values = [x0]  # store values for plotting
+    x_values = [x0]
     
     while n > 0:
         x1 = g(x0)
@@ -32,7 +31,6 @@ if __name__ == "__main__":
 
     ans, x_values = fixed_point(x0, tol, n)
 
-    # Plotting convergence
     plt.figure(figsize=(8,5))
     plt.plot(range(len(x_values)), x_values, 'bo-', markersize=5)
     plt.axhline(y=ans, color='r', linestyle='--', label=f'Converged root ≈ {ans:.6f}')

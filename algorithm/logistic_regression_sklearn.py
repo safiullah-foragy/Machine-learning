@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LogisticRegression
 
-# Dataset (binary classification)
 X = np.array([1, 2, 3, 4]).reshape(-1, 1)
 Y = np.array([0, 0, 1, 1])
 

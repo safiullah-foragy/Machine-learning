@@ -1,11 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Sigmoid function
 def sigmoid(z):
     return 1 / (1 + np.exp(-z))
 
-# Gradient Descent for Logistic Regression
 def logistic_gradient_descent(x, y, m=0, b=0, learning_rate=0.1, epochs=1000):
     n = len(y)
     for _ in range(epochs):

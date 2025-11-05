@@ -1,11 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Function dy/dx
 def f(x, y):
-    return x + y   # Example: dy/dx = x + y
+    return x + y
 
-# Euler's Method
 def euler_method(x0, y0, x_end, h):
     n = int((x_end - x0) / h)
     x_points = [x0]

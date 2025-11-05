@@ -1,11 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Function to integrate (rocket equation example)
 def f(x):
    return 200.0 * np.log(140000.0 / (140000.0 - 2100.0 * x)) - 9.8 * x
 
-# Simpson's 3/8 Rule (single interval)
 def simpson_three_eighth_single(a, b):
     h = (b - a) / 3
     x0 = a
@@ -14,7 +12,6 @@ def simpson_three_eighth_single(a, b):
     x3 = b
     return (b - a) * (f(x0) + 3*f(x1) + 3*f(x2) + f(x3)) / 8
 
-# Basic single-interval Trapezoidal Rule
 def trapezoidal_basic(a, b):
     return (b - a) * (f(a) + f(b)) / 2
 

@@ -1,18 +1,15 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Function to integrate (rocket equation example)
 def f(x):
     return 200.0 * np.log(140000.0 / (140000.0 - 2100.0 * x)) - 9.8 * x
 
-# Simpson's 1/3 Rule (single interval)
 def simpson_single_interval(a, b):
     x0 = a
     x2 = b
     x1 = (a + b) / 2
     return (b - a) * (f(x0) + 4*f(x1) + f(x2)) / 6
 
-# Basic single-interval Trapezoidal Rule
 def trapezoidal_basic(a, b):
     return (b - a) * (f(a) + f(b)) / 2
 

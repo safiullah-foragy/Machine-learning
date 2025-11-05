@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Example data
 x = np.array([0, 1, 2, 3, 4, 5])
 y = np.array([1, 2, 1.3, 3.75, 2.25, 5.5])
 

@@ -1,15 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Example function
 def f(x):
     return 1 / (1 + x**2)
 
-# Integration limits
 a = 0
 b = 1
 
-# Single-interval Trapezoidal Rule
 integral = (b - a) * (f(a) + f(b)) / 2
 print(f"Integral using single-interval Trapezoidal Rule: {integral:.6f}")
 
