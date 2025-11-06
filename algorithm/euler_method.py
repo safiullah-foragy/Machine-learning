@@ -12,35 +12,30 @@ def euler_method(x0, y0, x_end, h):
     x = x0
     y = y0
 
-    print("x\t\ty")
-    print(f"{x0:.4f}\t{y0:.6f}")
-
     for _ in range(n):
         y = y + h * f(x, y)
         x = x + h
         x_points.append(x)
         y_points.append(y)
-        print(f"{x:.4f}\t{y:.6f}")
 
     return np.array(x_points), np.array(y_points)
 
-if __name__ == "__main__":
-    x0 = 0
-    y0 = 1
-    x_end = 0.4
-    h = 0.1
 
+initial_values = [
+    (0, 1, 0.4, 0.1),
+    (0, 2, 0.4, 0.1),
+    (0.1, 0.5, 0.5, 0.05)
+]
+
+plt.figure(figsize=(8,5))
+
+for x0, y0, x_end, h in initial_values:
     x_points, y_points = euler_method(x0, y0, x_end, h)
+    plt.plot(x_points, y_points, 'o-', label=f"x0={x0}, y0={y0}, h={h}")
 
-    x_exact = np.linspace(x0, x_end, 100)
-    y_exact = -x_exact - 1 + 2*np.exp(x_exact)
-
-    plt.figure(figsize=(8,5))
-    plt.plot(x_points, y_points, 'bo-', label="Euler's Method", markersize=6)
-    plt.plot(x_exact, y_exact, 'r--', label='Exact Solution')
-    plt.xlabel('x')
-    plt.ylabel('y')
-    plt.title("Euler's Method Approximation")
-    plt.legend()
-    plt.grid(True)
-    plt.show()
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title("Euler's Method for Multiple Initial Values")
+plt.legend()
+plt.grid(True)
+plt.show()
