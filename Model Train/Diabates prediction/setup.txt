@@ -1,3 +1,5 @@
+py -m pip install pandas numpy scikit-learn tensorflow
+
 py -m venv .venv
 
 .\.venv\Scripts\activate
